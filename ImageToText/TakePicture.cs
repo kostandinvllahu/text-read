@@ -15,9 +15,7 @@ namespace ImageToText
 {
     public partial class TakePicture : Form
     {
-
         Camera myCamera = new Camera();
-
         public TakePicture()
         {
             InitializeComponent();
@@ -26,11 +24,6 @@ namespace ImageToText
         }
 
         private void myCamera_onFrameArrived(object source, FrameArrivedEventArgs e)
-        {
-           
-        }
-
-        private void TakePicture_Load(object sender, FrameArrivedEventArgs e)
         {
             Image img = e.GetFrame();
             pictureBox1.Image = img;
@@ -41,13 +34,13 @@ namespace ImageToText
             var cameraDevice = myCamera.GetCameraSources();
             var cameraResolution = myCamera.GetSupportedResolutions();
 
-            foreach(var d in cameraDevice)
+            foreach (var d in cameraDevice)
             {
-            comboBox1.Items.Add(d);
+                comboBox1.Items.Add(d);
             }
-            foreach(var r in cameraResolution)
+            foreach (var r in cameraResolution)
             {
-              comboBox2.Items.Add(r);
+                comboBox2.Items.Add(r);
             }
 
             comboBox1.SelectedIndex = 0;
@@ -86,10 +79,10 @@ namespace ImageToText
                 else
                 {
                     string path = @"C:\Users\User\source\repos\ImageToText\ImageToText\img";
-                    pictureBox1.Image.Save(path + @"\" + textBox1.Text + ".Jpg", ImageFormat.Jpeg);
+                    pictureBox1.Image.Save(path + @"\" + textBox1.Text + ".jpg", ImageFormat.Jpeg);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -100,6 +93,11 @@ namespace ImageToText
             Form1 f = new Form1();
             f.Show();
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

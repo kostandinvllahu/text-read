@@ -23,7 +23,7 @@ namespace ImageToText
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pictarget.ImageLocation = @"C:\Users\User\source\repos\ImageToText\ImageToText\img\testimg.jpg";
+            pictarget.ImageLocation = @"C:\Users\User\source\repos\ImageToText\ImageToText\img\testim.jpg";
 
         }
 
