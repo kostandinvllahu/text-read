@@ -26,8 +26,6 @@ C:\Users\User\source\repos\ImageToText\ImageToText\obj\Debug\ImageToText.csproj.
 C:\Users\User\source\repos\ImageToText\ImageToText\obj\Debug\ImageToText.csproj.CopyComplete
 C:\Users\User\source\repos\ImageToText\ImageToText\obj\Debug\ImageToText.exe
 C:\Users\User\source\repos\ImageToText\ImageToText\obj\Debug\ImageToText.pdb
-C:\Users\User\source\repos\ImageToText\ImageToText\bin\Debug\AForge.dll
 C:\Users\User\source\repos\ImageToText\ImageToText\bin\Debug\AForge.Video.DirectShow.dll
 C:\Users\User\source\repos\ImageToText\ImageToText\bin\Debug\AForge.Video.dll
-C:\Users\User\source\repos\ImageToText\ImageToText\bin\Debug\DarrenLee.Media.dll
 C:\Users\User\source\repos\ImageToText\ImageToText\obj\Debug\ImageToText.TakePicture.resources

@@ -80,6 +80,10 @@ namespace ImageToText
                 {
                     string path = @"C:\Users\User\source\repos\ImageToText\ImageToText\img";
                     pictureBox1.Image.Save(path + @"\" + textBox1.Text + ".jpg", ImageFormat.Jpeg);
+
+                    Form1 f = new Form1();
+                    f.Show();
+                    //this.Close();
                 }
             }
             catch (Exception ex)

@@ -42,7 +42,22 @@ namespace ImageToText
             TakePicture t = new TakePicture();
             //t. this;
             t.Show();
-            this.Hide();
+           this.Hide();
+        }
+
+        private void cboCamera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pictarget.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }
