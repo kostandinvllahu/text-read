@@ -24,9 +24,19 @@ namespace ImageToText
         private void Form1_Load(object sender, EventArgs e)
         {
             pictarget.ImageLocation = @"C:\Users\User\source\repos\ImageToText\ImageToText\img\testim.jpg";
+            automatic();
 
         }
-
+        public void automatic()
+        {
+            using (var objOcr = OcrApi.Create())
+            {
+                objOcr.Init(Patagames.Ocr.Enums.Languages.English);
+                string plainText = objOcr.GetTextFromImage(pictarget.ImageLocation);
+                txtOutput.Text = plainText;
+               
+            }
+        }
         private void btnEnter_Click(object sender, EventArgs e)
         {
             using(var objOcr = OcrApi.Create())
@@ -42,7 +52,12 @@ namespace ImageToText
             TakePicture t = new TakePicture();
             //t. this;
             t.Show();
-           this.Hide();
+            this.Hide();
+            /*for (int i=0; i<6; i++)
+            {
+                t.Show();
+            }*/
+           
         }
 
         private void cboCamera_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,7 +67,7 @@ namespace ImageToText
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pictarget.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+          
         }
 
         private void button2_Click(object sender, EventArgs e)

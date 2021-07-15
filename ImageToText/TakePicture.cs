@@ -130,7 +130,7 @@ namespace ImageToText
                  timer1.Stop();
                  textBox2.Text = "";
                  timer1.Start();
-                automatic();
+                 automatic();
                  
                
             }
@@ -151,7 +151,11 @@ namespace ImageToText
 
                     Form1 f = new Form1();
                     f.Show();
-                    //this.Close();
+                    for (int i = 0; i < 6; i++)
+                    {
+                        f.Close();
+                    }
+
                 }
             }
             catch (Exception ex)
